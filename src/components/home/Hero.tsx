@@ -5,12 +5,12 @@ import {
   CalendarCheckIcon,
   EarIcon,
   HeartHandshakeIcon,
-  MessageCircleIcon,
   TargetIcon,
   UsersIcon } from
 'lucide-react';
 import { ButtonLink } from '../ui/Button';
 import { Reveal } from '../ui/Reveal';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { LOGO_URL, whatsappLink } from '../../data/site';
 
 const EASE = [0.23, 1, 0.32, 1] as const;
@@ -90,7 +90,7 @@ export function Hero() {
                   variant="outline"
                   size="lg"
                   className="w-full sm:w-auto"
-                  icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+                  icon={<WhatsAppIcon className="h-5 w-5" />}>
                   
                   WhatsApp PARC
                 </ButtonLink>

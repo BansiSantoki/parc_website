@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarCheckIcon, MessageCircleIcon } from 'lucide-react';
+import { CalendarCheckIcon } from 'lucide-react';
 import { Seo } from '../components/ui/Seo';
 import { PageHero } from '../components/ui/PageHero';
 import { Section, SectionHeading } from '../components/ui/Section';
@@ -7,6 +7,7 @@ import { ChainFlow } from '../components/ui/StepFlow';
 import { ChipGrid } from '../components/ui/ChipGrid';
 import { ButtonLink } from '../components/ui/Button';
 import { LeadCTA } from '../components/ui/LeadCTA';
+import { WhatsAppIcon } from '../components/ui/WhatsAppIcon';
 import { images, whatsappLink } from '../data/site';
 
 const flow = [
@@ -75,7 +76,7 @@ export function HearingRehabilitation() {
             external
             variant="ghost"
             size="lg"
-            icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+            icon={<WhatsAppIcon className="h-5 w-5" variant="inverse" />}>
             
               WhatsApp PARC
             </ButtonLink>

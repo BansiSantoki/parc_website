@@ -1,5 +1,5 @@
 import React from 'react';
-import { CalendarCheckIcon, MessageCircleIcon } from 'lucide-react';
+import { CalendarCheckIcon } from 'lucide-react';
 import { Seo } from '../components/ui/Seo';
 import { PageHero } from '../components/ui/PageHero';
 import { Section, SectionHeading } from '../components/ui/Section';
@@ -8,6 +8,7 @@ import { ButtonLink } from '../components/ui/Button';
 import { LeadCTA } from '../components/ui/LeadCTA';
 import { EnquiryForm } from '../components/home/EnquiryForm';
 import { ProcessTimeline } from '../components/home/ProcessTimeline';
+import { WhatsAppIcon } from '../components/ui/WhatsAppIcon';
 import { assessmentAreas } from '../data/services';
 import { images, whatsappLink } from '../data/site';
 
@@ -51,7 +52,7 @@ export function ChildDevelopmentAssessment() {
             external
             variant="ghost"
             size="lg"
-            icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+            icon={<WhatsAppIcon className="h-5 w-5" variant="inverse" />}>
             
               WhatsApp PARC
             </ButtonLink>

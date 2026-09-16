@@ -1,11 +1,12 @@
 import React from 'react';
-import { CalendarCheckIcon, MessageCircleIcon } from 'lucide-react';
+import { CalendarCheckIcon } from 'lucide-react';
 import { Seo } from './Seo';
 import { PageHero } from './PageHero';
 import { Section, SectionHeading } from './Section';
 import { ChipGrid, Highlight } from './ChipGrid';
 import { ButtonLink } from './Button';
 import { LeadCTA } from './LeadCTA';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { whatsappLink } from '../../data/site';
 
 export type ServicePageProps = {
@@ -65,7 +66,7 @@ export function ServicePageTemplate({
             external
             variant="ghost"
             size="lg"
-            icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+            icon={<WhatsAppIcon className="h-5 w-5" variant="inverse" />}>
             
               WhatsApp PARC
             </ButtonLink>

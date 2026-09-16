@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { CalendarCheckIcon, ChevronDownIcon, MenuIcon, MessageCircleIcon, XIcon } from 'lucide-react';
+import { CalendarCheckIcon, ChevronDownIcon, MenuIcon, XIcon } from 'lucide-react';
 import { LogoLink } from '../brand/Logo';
 import { ButtonLink } from '../ui/Button';
-import { navItems, primaryNav, serviceNav, whatsappLink } from '../../data/site';
+import { navItems, primaryNav, serviceNav } from '../../data/site';
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -51,7 +51,7 @@ export function Navbar() {
       </a>
 
       <div className="mx-auto flex w-full max-w-content items-center justify-between gap-4 px-5 py-3 sm:px-8 lg:px-10">
-        <LogoLink height={60} />
+        <LogoLink height={68} />
 
         <nav aria-label="Main navigation" className="hidden items-center gap-1 xl:flex">
           {primaryNav.slice(0, 2).map((item) =>
@@ -111,15 +111,6 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ButtonLink
-            href={whatsappLink()}
-            external
-            variant="outline"
-            className="hidden lg:inline-flex"
-            icon={<MessageCircleIcon className="h-4 w-4" strokeWidth={2} />}>
-            
-            WhatsApp Us
-          </ButtonLink>
           <ButtonLink
             to="/contact"
             variant="primary"
@@ -188,16 +179,6 @@ export function Navbar() {
               icon={<CalendarCheckIcon className="h-5 w-5" strokeWidth={2} />}>
               
                 Book an Assessment
-              </ButtonLink>
-              <ButtonLink
-              href={whatsappLink()}
-              external
-              variant="outline"
-              size="lg"
-              className="w-full"
-              icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
-              
-                WhatsApp PARC
               </ButtonLink>
             </div>
           </motion.div> :

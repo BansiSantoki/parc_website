@@ -1,7 +1,8 @@
 import React from 'react';
-import { CalendarCheckIcon, MessageCircleIcon } from 'lucide-react';
+import { CalendarCheckIcon } from 'lucide-react';
 import { ButtonLink } from './Button';
 import { Reveal } from './Reveal';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { whatsappLink } from '../../data/site';
 
 type LeadCTAProps = {
@@ -55,7 +56,7 @@ export function LeadCTA({
                 external
                 variant="ghost"
                 size="lg"
-                icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+                icon={<WhatsAppIcon className="h-5 w-5" variant="inverse" />}>
                 
                 Chat with PARC on WhatsApp
               </ButtonLink>

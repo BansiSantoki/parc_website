@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CalendarCheckIcon, MailIcon, MapPinIcon, MessageCircleIcon, PhoneIcon } from 'lucide-react';
+import { CalendarCheckIcon, MailIcon, MapPinIcon, PhoneIcon } from 'lucide-react';
 import { LogoMark } from '../brand/Logo';
 import { ButtonLink } from '../ui/Button';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { serviceNav, site, whatsappLink } from '../../data/site';
 
 const quickLinks = [
@@ -21,7 +22,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-content px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <LogoMark height={80} />
+            <LogoMark height={92} />
             <p className="mt-5 font-display text-lg font-bold text-white">{site.fullName}</p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-accent-500">{site.tagline}</p>
             <ButtonLink
@@ -97,7 +98,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex gap-3">
-                <MessageCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" strokeWidth={2} />
+                <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0" variant="inverse" />
                 <a
                   href={whatsappLink()}
                   target="_blank"

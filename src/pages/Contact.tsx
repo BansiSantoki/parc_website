@@ -1,5 +1,5 @@
 import React from 'react';
-import { MailIcon, MapPinIcon, MessageCircleIcon, NavigationIcon, PhoneIcon } from 'lucide-react';
+import { MailIcon, MapPinIcon, NavigationIcon, PhoneIcon } from 'lucide-react';
 import { Seo } from '../components/ui/Seo';
 import { PageHero } from '../components/ui/PageHero';
 import { Section, SectionHeading } from '../components/ui/Section';
@@ -7,6 +7,7 @@ import { Reveal } from '../components/ui/Reveal';
 import { ButtonLink } from '../components/ui/Button';
 import { EnquiryForm } from '../components/home/EnquiryForm';
 import { FaqSection } from '../components/home/FaqSection';
+import { WhatsAppIcon } from '../components/ui/WhatsAppIcon';
 import { site, whatsappLink } from '../data/site';
 
 export function Contact() {
@@ -40,7 +41,7 @@ export function Contact() {
             external
             variant="ghost"
             size="lg"
-            icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+            icon={<WhatsAppIcon className="h-5 w-5" variant="inverse" />}>
             
               WhatsApp PARC
             </ButtonLink>
@@ -79,7 +80,7 @@ export function Contact() {
                     </a>
                   </li>
                   <li className="flex gap-3">
-                    <MessageCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-brand-500" strokeWidth={2} />
+                    <WhatsAppIcon className="mt-0.5 h-5 w-5 shrink-0" />
                     <a
                       href={whatsappLink()}
                       target="_blank"

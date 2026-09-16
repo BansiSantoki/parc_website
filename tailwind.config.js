@@ -1,5 +1,5 @@
 export default {
-  content: ['./**/*.{ts,tsx,js,jsx,html}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -27,12 +27,6 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
         display: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
-      },
-      maxWidth: {
-        content: [
-  './index.html',
-  './src/**/*.{js,ts,jsx,tsx}'
-],
       },
       borderRadius: {
         card: '20px',

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { CheckCircle2Icon, MessageCircleIcon, PhoneIcon, SendIcon } from 'lucide-react';
+import { CheckCircle2Icon, PhoneIcon, SendIcon } from 'lucide-react';
 import { Section, SectionHeading } from '../ui/Section';
 import { Reveal } from '../ui/Reveal';
 import { ButtonLink } from '../ui/Button';
+import { WhatsAppIcon } from '../ui/WhatsAppIcon';
 import { site, whatsappLink } from '../../data/site';
 
 const concernOptions = [
@@ -177,7 +178,7 @@ export function EnquiryForm() {
             <aside className="flex h-full flex-col justify-between rounded-panel bg-brand-700 p-7 text-white sm:p-9">
               <div>
                 <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#1FA855]">
-                  <MessageCircleIcon className="h-7 w-7" strokeWidth={2} />
+                  <WhatsAppIcon className="h-7 w-7" variant="inverse" />
                 </span>
                 <h3 className="mt-6 font-display text-2xl font-extrabold leading-tight">
                   Prefer to simply message us?
@@ -200,7 +201,7 @@ export function EnquiryForm() {
                   external
                   variant="accent"
                   size="lg"
-                  icon={<MessageCircleIcon className="h-5 w-5" strokeWidth={2} />}>
+                  icon={<WhatsAppIcon className="h-5 w-5" />}>
                   
                   WhatsApp PARC
                 </ButtonLink>
