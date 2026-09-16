@@ -14,18 +14,24 @@ type LogoProps = {
  * so it is presented unmodified inside a dark brand tile.
  */
 export function LogoMark({ height = 48, className = '' }: {height?: number;className?: string;}) {
+  const maxHeight = Math.max(36, height);
+  const maxWidth = Math.max(120, maxHeight * 1.85);
+
   return (
     <span
       className={`inline-flex shrink-0 items-center justify-center overflow-hidden ${className}`}
-      style={{ height: Math.max(36, height), width: Math.max(140, height * 2.2) }}>
+      style={{
+        height: `clamp(42px, 7.5vw, ${maxHeight}px)`,
+        width: `clamp(116px, 15vw, ${maxWidth}px)`
+      }}>
       
       <img
         src={LOGO_URL}
         alt="PARC – Pediatric Audiological Rehabilitation Center logo"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover scale-[1.24] sm:scale-[1.14]"
         loading="eager"
         decoding="async"
-        style={{ objectFit: 'cover', objectPosition: 'center center' }} />
+        style={{ objectFit: 'cover', objectPosition: 'center center', transformOrigin: 'center' }} />
       
     </span>);
 
