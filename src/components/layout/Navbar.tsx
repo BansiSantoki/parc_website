@@ -51,7 +51,7 @@ export function Navbar() {
       </a>
 
       <div className="mx-auto flex w-full max-w-content items-center justify-between gap-4 px-5 py-3 sm:px-8 lg:px-10">
-        <LogoLink height={68} />
+        <LogoLink height={76} />
 
         <nav aria-label="Main navigation" className="hidden items-center gap-1 xl:flex">
           {primaryNav.slice(0, 2).map((item) =>

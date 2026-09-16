@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { LOGO_URL, site } from '../../data/site';
 
@@ -18,15 +17,15 @@ export function LogoMark({ height = 48, className = '' }: {height?: number;class
   return (
     <span
       className={`inline-flex shrink-0 items-center justify-center overflow-hidden ${className}`}
-      style={{ height: Math.max(36, height), width: Math.max(140, height * 2.6) }}>
+      style={{ height: Math.max(36, height), width: Math.max(140, height * 2.2) }}>
       
       <img
         src={LOGO_URL}
         alt="PARC – Pediatric Audiological Rehabilitation Center logo"
-        className="h-full w-full object-contain"
+        className="h-full w-full object-cover"
         loading="eager"
         decoding="async"
-        style={{ objectFit: 'contain' }} />
+        style={{ objectFit: 'cover', objectPosition: 'center center' }} />
       
     </span>);
 
