@@ -24,7 +24,6 @@ export function whatsappLink(message?: string): string {
 export type NavItem = {label: string;to: string;};
 
 export const navItems: NavItem[] = [
-{ label: 'Home', to: '/' },
 { label: 'About PARC', to: '/about' },
 { label: 'Pediatric Audiology', to: '/pediatric-audiology' },
 { label: 'Speech & Language Therapy', to: '/speech-language-therapy' },
@@ -38,19 +37,16 @@ export const navItems: NavItem[] = [
 },
 { label: 'Child Development Assessment', to: '/child-development-assessment' },
 { label: 'Parent Resources', to: '/parent-resources' },
-{ label: 'Blogs', to: '/blog' },
-{ label: 'Contact', to: '/contact' }];
+{ label: 'Blogs', to: '/blog' }];
 
 
 /* Condensed set shown inline on desktop; the rest live in the "Services" menu. */
 export const primaryNav: NavItem[] = [
-{ label: 'Home', to: '/' },
 { label: 'About', to: '/about' },
 { label: 'Assessment', to: '/child-development-assessment' },
 { label: 'Concerns', to: '/child-development-concerns' },
 { label: 'Parent Resources', to: '/parent-resources' },
-{ label: 'Blogs', to: '/blog' },
-{ label: 'Contact', to: '/contact' }];
+{ label: 'Blogs', to: '/blog' }];
 
 
 export const serviceNav: NavItem[] = [
