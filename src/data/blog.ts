@@ -1,3 +1,5 @@
+import { images } from './site';
+
 export type BlogCategory =
 'Audiology' |
 'Speech & Language' |
@@ -24,6 +26,16 @@ export const blogCategories: BlogCategory[] = [
 'Special Education',
 'Early Intervention',
 'Parent Guidance'];
+
+export const blogImageByCategory: Record<BlogCategory, string> = {
+  Audiology: images.audiology,
+  'Speech & Language': images.speech,
+  'Occupational Therapy': images.ot,
+  Sensory: images.sensory,
+  'Special Education': images.education,
+  'Early Intervention': images.early,
+  'Parent Guidance': images.about
+};
 
 
 export const blogPosts: BlogPost[] = [

@@ -6,7 +6,7 @@ import { PageHero } from '../components/ui/PageHero';
 import { Section, SectionHeading } from '../components/ui/Section';
 import { Reveal } from '../components/ui/Reveal';
 import { LeadCTA } from '../components/ui/LeadCTA';
-import { blogCategories, blogPosts, type BlogCategory } from '../data/blog';
+import { blogCategories, blogImageByCategory, blogPosts, type BlogCategory } from '../data/blog';
 import { LOGO_URL } from '../data/site';
 
 const PER_PAGE = 9;
@@ -61,12 +61,20 @@ export function Blog() {
         <Reveal>
           <article className="overflow-hidden rounded-panel border border-brand-100 bg-brand-50 shadow-ring lg:flex">
             <div className="flex w-full items-center justify-center bg-gradient-to-br from-brand-50 via-white to-accent-50 p-6 sm:p-8 lg:w-[46%] lg:p-10">
-              <div className="w-full rounded-[26px] border border-brand-100 bg-white p-5 shadow-soft">
-                <div className="flex items-center justify-between gap-3">
+              <div className="w-full overflow-hidden rounded-[26px] border border-brand-100 bg-white p-3 shadow-soft sm:p-5">
+                <img
+                  src={blogImageByCategory[featured.category]}
+                  alt={featured.title}
+                  className="h-56 w-full rounded-2xl object-cover sm:h-64"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="mt-5 flex items-center justify-between gap-3">
                   <img
                     src={LOGO_URL}
                     alt="PARC logo"
-                    className="h-14 w-auto object-contain sm:h-16"
+                    className="h-12 w-auto object-contain sm:h-14"
                     loading="lazy"
                     decoding="async" />
                   <span className="rounded-full bg-accent-100 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-700">
@@ -170,27 +178,36 @@ export function Blog() {
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {visible.map((post, index) =>
             <Reveal as="li" key={post.id} delay={Math.min(index * 0.04, 0.28)}>
-                  <article className="group flex h-full flex-col rounded-panel border border-brand-100 bg-white p-6 shadow-ring transition-[transform,box-shadow,border-color] duration-200 ease-premium hover:-translate-y-1 hover:border-brand-200 hover:shadow-lift">
-                    <div className="flex items-center justify-between gap-3">
-                      <span className="rounded-full bg-brand-100 px-3 py-1 text-xs font-bold text-brand-600">
-                        {post.category}
-                      </span>
-                      <span className="text-xs text-brand-800/50">{post.readTime}</span>
+                  <article className="group flex h-full flex-col overflow-hidden rounded-panel border border-brand-100 bg-white shadow-ring transition-[transform,box-shadow,border-color] duration-200 ease-premium hover:-translate-y-1 hover:border-brand-200 hover:shadow-lift">
+                    <img
+                      src={blogImageByCategory[post.category]}
+                      alt={post.title}
+                      className="h-44 w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div className="flex h-full flex-col p-6">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="rounded-full bg-brand-100 px-3 py-1 text-xs font-bold text-brand-600">
+                          {post.category}
+                        </span>
+                        <span className="text-xs text-brand-800/50">{post.readTime}</span>
+                      </div>
+                      <h3 className="mt-4 font-display text-lg font-bold leading-snug text-brand-700">
+                        {post.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-relaxed text-brand-800/70">{post.excerpt}</p>
+                      <Link
+                    to={`/blog/${post.slug}`}
+                    className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold uppercase tracking-wide text-brand-500">
+                    
+                        Read More
+                        <ArrowRightIcon
+                      className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-1"
+                      strokeWidth={2.25} />
+                    
+                      </Link>
                     </div>
-                    <h3 className="mt-4 font-display text-lg font-bold leading-snug text-brand-700">
-                      {post.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-brand-800/70">{post.excerpt}</p>
-                    <Link
-                  to={`/blog/${post.slug}`}
-                  className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold uppercase tracking-wide text-brand-500">
-                  
-                      Read More
-                      <ArrowRightIcon
-                    className="h-4 w-4 transition-transform duration-200 ease-premium group-hover:translate-x-1"
-                    strokeWidth={2.25} />
-                  
-                    </Link>
                   </article>
                 </Reveal>
             )}

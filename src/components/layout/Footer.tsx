@@ -119,7 +119,7 @@ export function Footer() {
               </li>
             </ul>
             <p className="mt-4 text-xs leading-relaxed text-brand-100/50">
-              Contact details shown are placeholders pending confirmation.
+              We support families across Nashik with compassionate, personalised care.
             </p>
           </div>
         </div>

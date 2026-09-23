@@ -11,7 +11,7 @@ import {
 import { ButtonLink } from '../ui/Button';
 import { Reveal } from '../ui/Reveal';
 import { WhatsAppIcon } from '../ui/WhatsAppIcon';
-import { LOGO_URL, whatsappLink } from '../../data/site';
+import { LOGO_URL, images, whatsappLink } from '../../data/site';
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -42,9 +42,9 @@ export function Hero() {
 
             <Reveal delay={0.05}>
               <h1 className="mt-4 max-w-[8ch] break-words font-display text-[clamp(2.2rem,6vw,5rem)] font-bold leading-[0.85] tracking-[-0.05em] text-brand-700 sm:mt-6 sm:max-w-none lg:text-[3.6rem]">
-                Every Child Deserves the Opportunity to{' '}
+                Helping Every Child{' '}
                 <span className="relative inline-block align-baseline">
-                  <span className="relative z-10">Communicate, Learn &amp; Thrive.</span>
+                  <span className="relative z-10">Hear, Communicate &amp; Grow.</span>
                   <span
                     aria-hidden="true"
                     className="absolute inset-x-0 bottom-[0.1em] z-0 h-[0.18em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
@@ -55,21 +55,20 @@ export function Hero() {
 
             <Reveal delay={0.1}>
               <p className="mt-4 max-w-[22rem] text-[0.76rem] font-semibold leading-snug text-brand-500 sm:mt-6 sm:text-xl">
-                Comprehensive Pediatric Audiology, Speech Therapy, Occupational Therapy, Sensory
-                Integration &amp; Special Education in Nashik
+                Multidisciplinary pediatric audiology, speech, occupational therapy, sensory support,
+                and special education in Nashik.
               </p>
             </Reveal>
 
             <Reveal delay={0.14}>
               <div className="mt-4 max-w-[22rem] space-y-3 text-[0.78rem] leading-relaxed text-brand-800/75 sm:text-base">
                 <p>
-                  At PARC – Pediatric Audiological Rehabilitation Center, we bring different areas of
-                  child development together under one coordinated care model.
+                  At PARC, we support children with hearing, speech, language, learning, sensory and
+                  developmental needs through compassionate, child-centred care.
                 </p>
                 <p>
-                  From hearing and communication to speech, language, learning, sensory processing and
-                  functional skills, our multidisciplinary approach is designed around the individual
-                  needs of every child.
+                  Every child is different, and so is every care plan. We work with families to build
+                  practical support that fits daily life and long-term growth.
                 </p>
               </div>
             </Reveal>
@@ -140,7 +139,17 @@ function HeroVisual() {
             </span>
           </div>
 
-          <div className="mt-4 grid gap-3 sm:mt-5 sm:grid-cols-2">
+          <div className="mt-4 overflow-hidden rounded-[22px] border border-brand-100 bg-brand-50 shadow-soft">
+            <img
+              src={images.hero}
+              alt="Child receiving compassionate therapy support at PARC"
+              className="h-56 w-full object-cover sm:h-64"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl bg-brand-700 p-4 text-white shadow-soft">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-100/80">Care model</p>
               <p className="mt-3 font-display text-4xl font-extrabold leading-none">5</p>
@@ -161,6 +170,20 @@ function HeroVisual() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            {[images.audiology, images.speech, images.ot].map((image, index) => (
+              <div key={image} className="overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-ring">
+                <img
+                  src={image}
+                  alt={['Audiology care', 'Speech therapy support', 'Occupational therapy support'][index]}
+                  className="h-24 w-full object-cover sm:h-28"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            ))}
           </div>
 
           <div className="mt-4 rounded-2xl bg-gradient-to-r from-brand-100 via-accent-50 to-white p-4">

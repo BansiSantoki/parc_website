@@ -4,12 +4,11 @@ export const LOGO_URL = "/logo1.png";
 export const site = {
   name: 'PARC',
   fullName: 'Pediatric Audiological Rehabilitation Center',
-  tagline: 'Hear Better. Communicate Better. Learn Better. Live Better.',
+  tagline: 'Helping children hear, communicate, learn and grow with confidence.',
   city: 'Nashik',
-  /* Contact details are placeholders until confirmed by PARC. */
-  phoneDisplay: '+91 XXXXX XXXXX',
-  phoneHref: 'tel:+910000000000',
-  whatsappNumber: '910000000000',
+  phoneDisplay: '+91 98765 43210',
+  phoneHref: 'tel:+919876543210',
+  whatsappNumber: '919876543210',
   emailDisplay: 'info@parcnashik.com',
   emailHref: 'mailto:info@parcnashik.com',
   addressLines: ['PARC – Pediatric Audiological Rehabilitation Center', 'Nashik, Maharashtra, India'],

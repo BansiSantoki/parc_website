@@ -18,7 +18,7 @@ function PolicyBody({ sections }: PolicyProps) {
           </div>
         )}
         <p className="rounded-card border border-brand-100 bg-brand-50 p-5 text-sm text-brand-800/65">
-          This page is a placeholder. Final wording will be provided by PARC.
+          This information is provided to help families understand how PARC communicates and supports care.
         </p>
       </div>
     </Section>);

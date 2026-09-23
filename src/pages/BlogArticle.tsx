@@ -7,7 +7,7 @@ import { Section, SectionHeading } from '../components/ui/Section';
 import { Reveal } from '../components/ui/Reveal';
 import { ButtonLink } from '../components/ui/Button';
 import { LeadCTA } from '../components/ui/LeadCTA';
-import { blogPosts } from '../data/blog';
+import { blogImageByCategory, blogPosts } from '../data/blog';
 
 export function BlogArticle() {
   const { slug } = useParams<{slug: string;}>();
@@ -64,15 +64,24 @@ export function BlogArticle() {
 
       <Section tone="white">
         <div className="max-w-3xl">
-          <div className="rounded-panel border border-brand-100 bg-brand-50 p-7 sm:p-9">
-            <h2 className="font-display text-xl font-bold text-brand-700">Article coming soon</h2>
-            <p className="mt-3 text-base leading-relaxed text-brand-800/75">
-              The full text for this article has not been published yet. If you have a question about
-              your child in the meantime, our team is happy to guide you on where to start.
-            </p>
-            <ButtonLink to="/contact" className="mt-6">
-              Talk to Our Team
-            </ButtonLink>
+          <div className="overflow-hidden rounded-panel border border-brand-100 bg-brand-50 shadow-ring">
+            <img
+              src={blogImageByCategory[post.category]}
+              alt={post.title}
+              className="h-64 w-full object-cover sm:h-80"
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="p-7 sm:p-9">
+              <h2 className="font-display text-xl font-bold text-brand-700">Article coming soon</h2>
+              <p className="mt-3 text-base leading-relaxed text-brand-800/75">
+                The full text for this article has not been published yet. If you have a question about
+                your child in the meantime, our team is happy to guide you on where to start.
+              </p>
+              <ButtonLink to="/contact" className="mt-6">
+                Talk to Our Team
+              </ButtonLink>
+            </div>
           </div>
         </div>
 

@@ -119,8 +119,8 @@ export function Contact() {
                 </div>
 
                 <p className="mt-6 text-xs leading-relaxed text-brand-800/55">
-                  Phone number, email address and full street address are placeholders and will be
-                  updated with PARC&apos;s confirmed details.
+                  We are here to help you understand the next step for your child with thoughtful,
+                  family-focused guidance.
                 </p>
               </div>
             </Reveal>
@@ -129,23 +129,44 @@ export function Contact() {
           <div className="lg:col-span-7">
             <Reveal delay={0.1}>
               <div className="overflow-hidden rounded-panel border border-brand-100 bg-brand-100 shadow-ring">
-                <div className="flex h-72 flex-col items-center justify-center gap-4 px-6 text-center sm:h-[26rem]">
-                  <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-brand-500 shadow-soft">
-                    <MapPinIcon className="h-7 w-7" strokeWidth={1.75} />
-                  </span>
-                  <p className="font-display text-lg font-bold text-brand-700">
-                    Google Map embed placeholder
-                  </p>
-                  <p className="max-w-sm text-sm text-brand-800/70">
-                    The interactive map will appear here once the centre&apos;s confirmed address is
-                    added.
-                  </p>
+                <div className="flex h-72 flex-col justify-between bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.9),_rgba(217,234,255,0.75)_35%,_rgba(191,219,254,0.55)_100%)] p-6 sm:h-[26rem] sm:p-8">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-brand-500 shadow-soft">
+                      <MapPinIcon className="h-7 w-7" strokeWidth={1.75} />
+                    </span>
+                    <span className="rounded-full border border-brand-200 bg-white/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600">
+                      Nashik
+                    </span>
+                  </div>
+
+                  <div className="max-w-md">
+                    <p className="font-display text-2xl font-extrabold text-brand-700">
+                      Visit PARC in Nashik
+                    </p>
+                    <p className="mt-3 text-sm leading-relaxed text-brand-800/70">
+                      We welcome families seeking support for hearing, speech, language, learning,
+                      sensory and developmental concerns.
+                    </p>
+                  </div>
+
+                  <div className="rounded-card border border-brand-100 bg-white/75 p-4 shadow-soft">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-500">
+                      Address
+                    </p>
+                    <p className="mt-2 text-sm font-semibold text-brand-800/80">
+                      {site.addressLines.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+
                   <ButtonLink
                     href={site.mapsHref}
                     external
                     variant="white"
                     icon={<NavigationIcon className="h-4 w-4" strokeWidth={2} />}>
-                    
                     Open in Google Maps
                   </ButtonLink>
                 </div>
