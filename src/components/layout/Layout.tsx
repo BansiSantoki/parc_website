@@ -13,11 +13,13 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-brand-50">
-      <Navbar />
-      <main id="main" className="flex-1">
-        <Outlet />
-      </main>
-      <Footer />
+      <div className="mx-auto flex w-full max-w-[440px] flex-1 flex-col bg-brand-50 lg:max-w-none">
+        <Navbar />
+        <main id="main" className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
       <FloatingWhatsApp />
     </div>);
 

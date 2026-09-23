@@ -30,18 +30,18 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 h-[70%] bg-brand-100/70"
         style={{ clipPath: 'ellipse(120% 100% at 70% 0%)' }} />
       
-      <div className="relative mx-auto w-full max-w-content px-5 pb-16 pt-12 sm:px-8 sm:pb-20 lg:px-10 lg:pb-28 lg:pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
+      <div className="relative mx-auto w-full max-w-content px-3 pb-16 pt-8 sm:px-8 sm:pb-20 lg:px-10 lg:pb-28 lg:pt-20">
+        <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-6">
             <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-4 py-1.5 text-xs font-semibold text-brand-600 shadow-ring">
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white px-3 py-1.5 text-[10px] font-semibold text-brand-600 shadow-ring sm:px-4 sm:text-xs">
                 <EarIcon className="h-4 w-4" strokeWidth={2} />
                 Pediatric Audiological Rehabilitation Center · Nashik
               </span>
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-6 font-display text-[2.1rem] font-extrabold leading-[1.06] text-brand-700 sm:text-5xl lg:text-[3.6rem]">
+              <h1 className="mt-5 max-w-[14ch] font-display text-[2.5rem] font-extrabold leading-[0.94] tracking-[-0.06em] text-brand-700 sm:mt-6 sm:max-w-none sm:text-5xl lg:text-[3.6rem]">
                 Every Child Deserves the Opportunity to{' '}
                 <span className="relative inline-block">
                   <span className="relative z-10">Communicate, Learn &amp; Thrive.</span>
@@ -54,14 +54,14 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <p className="mt-6 text-lg font-semibold leading-snug text-brand-500 sm:text-xl">
+              <p className="mt-5 text-base font-semibold leading-snug text-brand-500 sm:mt-6 sm:text-xl">
                 Comprehensive Pediatric Audiology, Speech Therapy, Occupational Therapy, Sensory
                 Integration &amp; Special Education in Nashik
               </p>
             </Reveal>
 
             <Reveal delay={0.14}>
-              <div className="mt-5 space-y-4 text-base leading-relaxed text-brand-800/75">
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-brand-800/75 sm:text-base">
                 <p>
                   At PARC – Pediatric Audiological Rehabilitation Center, we bring different areas of
                   child development together under one coordinated care model.
@@ -98,7 +98,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.22}>
-              <ul className="mt-9 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+              <ul className="mt-8 grid gap-x-5 gap-y-3 text-left sm:grid-cols-2">
                 {trustIndicators.map(({ label, icon: Icon }) =>
                 <li key={label} className="flex items-center gap-2.5 text-sm font-semibold text-brand-700">
                     <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent-50 text-accent-700">
@@ -128,13 +128,13 @@ function HeroVisual() {
       transition={{ duration: 0.3, ease: EASE, delay: 0.1 }}
       className="relative">
       
-      <div className="relative overflow-hidden rounded-[28px] border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-accent-50 p-5 shadow-lift sm:p-6">
-        <div className="rounded-[22px] border border-brand-100 bg-white p-4 sm:p-5">
+      <div className="relative mx-auto w-full max-w-[26rem] overflow-hidden rounded-[28px] border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-accent-50 p-4 shadow-lift sm:max-w-none sm:p-6">
+        <div className="rounded-[22px] border border-brand-100 bg-white p-3 sm:p-5">
           <div className="flex items-center justify-between gap-3">
             <img
               src={LOGO_URL}
               alt="PARC logo"
-              className="h-16 w-auto object-contain sm:h-20"
+              className="h-14 w-auto object-contain sm:h-20"
               loading="eager"
               decoding="async" />
             <span className="rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600">
@@ -142,7 +142,7 @@ function HeroVisual() {
             </span>
           </div>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid gap-3 sm:mt-5 sm:grid-cols-2">
             <div className="rounded-2xl bg-brand-700 p-4 text-white shadow-soft">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-100/80">Care model</p>
               <p className="mt-3 font-display text-4xl font-extrabold leading-none">5</p>
