@@ -19,7 +19,7 @@ export function LogoMark({ height = 48, className = '' }: {height?: number;class
 
   return (
     <span
-      className={`inline-flex shrink-0 items-center justify-center overflow-hidden ${className}`}
+      className={`inline-flex shrink-0 items-center justify-center ${className}`}
       style={{
         height: `clamp(42px, 7.5vw, ${maxHeight}px)`,
         width: `clamp(116px, 15vw, ${maxWidth}px)`
@@ -28,10 +28,10 @@ export function LogoMark({ height = 48, className = '' }: {height?: number;class
       <img
         src={LOGO_URL}
         alt="PARC – Pediatric Audiological Rehabilitation Center logo"
-        className="h-full w-full object-cover scale-[1.24] sm:scale-[1.14]"
+        className="h-full w-full object-contain"
         loading="eager"
         decoding="async"
-        style={{ objectFit: 'cover', objectPosition: 'center center', transformOrigin: 'center' }} />
+        style={{ objectFit: 'contain', objectPosition: 'center center' }} />
       
     </span>);
 
