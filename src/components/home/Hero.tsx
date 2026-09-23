@@ -41,13 +41,13 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-5 max-w-[7.4ch] font-display text-[clamp(2.7rem,10vw,5rem)] font-extrabold leading-[0.88] tracking-[-0.06em] text-brand-700 sm:mt-6 sm:max-w-none lg:text-[3.6rem]">
+              <h1 className="mt-5 max-w-[7ch] break-words font-display text-[clamp(2.1rem,8vw,5rem)] font-extrabold leading-[0.84] tracking-[-0.06em] text-brand-700 sm:mt-6 sm:max-w-none lg:text-[3.6rem]">
                 Every Child Deserves the Opportunity to{' '}
                 <span className="relative inline-block align-baseline">
                   <span className="relative z-10">Communicate, Learn &amp; Thrive.</span>
                   <span
                     aria-hidden="true"
-                    className="absolute inset-x-0 bottom-[0.12em] z-0 h-[0.26em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
+                    className="absolute inset-x-0 bottom-[0.12em] z-0 h-[0.24em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
                   
                 </span>
               </h1>
