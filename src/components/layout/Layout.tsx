@@ -13,7 +13,7 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-brand-50">
-      <div className="mx-auto flex w-full flex-1 flex-col overflow-x-hidden bg-brand-50 sm:max-w-[440px] lg:max-w-none">
+      <div className="mx-auto flex w-full flex-1 flex-col overflow-x-hidden bg-brand-50 lg:max-w-none">
         <Navbar />
         <main id="main" className="flex-1 overflow-x-hidden">
           <Outlet />

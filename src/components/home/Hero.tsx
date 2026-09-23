@@ -41,27 +41,27 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-5 max-w-none break-words font-display text-[clamp(2.1rem,7vw,5rem)] font-extrabold leading-[0.82] tracking-[-0.06em] text-brand-700 sm:mt-6 lg:text-[3.6rem]">
+              <h1 className="mt-4 max-w-[8ch] break-words font-display text-[clamp(2.2rem,6vw,5rem)] font-bold leading-[0.85] tracking-[-0.05em] text-brand-700 sm:mt-6 sm:max-w-none lg:text-[3.6rem]">
                 Every Child Deserves the Opportunity to{' '}
                 <span className="relative inline-block align-baseline">
                   <span className="relative z-10">Communicate, Learn &amp; Thrive.</span>
                   <span
                     aria-hidden="true"
-                    className="absolute inset-x-0 bottom-[0.1em] z-0 h-[0.22em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
+                    className="absolute inset-x-0 bottom-[0.1em] z-0 h-[0.18em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
                   
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <p className="mt-5 max-w-[30rem] text-[0.95rem] font-semibold leading-snug text-brand-500 sm:mt-6 sm:text-xl">
+              <p className="mt-4 max-w-[22rem] text-[0.76rem] font-semibold leading-snug text-brand-500 sm:mt-6 sm:text-xl">
                 Comprehensive Pediatric Audiology, Speech Therapy, Occupational Therapy, Sensory
                 Integration &amp; Special Education in Nashik
               </p>
             </Reveal>
 
             <Reveal delay={0.14}>
-              <div className="mt-5 max-w-[30rem] space-y-4 text-[0.92rem] leading-relaxed text-brand-800/75 sm:text-base">
+              <div className="mt-4 max-w-[22rem] space-y-3 text-[0.78rem] leading-relaxed text-brand-800/75 sm:text-base">
                 <p>
                   At PARC – Pediatric Audiological Rehabilitation Center, we bring different areas of
                   child development together under one coordinated care model.
@@ -75,13 +75,12 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.18}>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-start">
                 <ButtonLink
                   to="/contact"
                   size="lg"
-                  className="w-full sm:w-auto"
-                  icon={<CalendarCheckIcon className="h-5 w-5" strokeWidth={2} />}>
-                  
+                  className="w-full justify-center sm:w-auto"
+                  icon={<CalendarCheckIcon className="h-4 w-3" strokeWidth={2} />}>
                   Book an Assessment
                 </ButtonLink>
                 <ButtonLink
@@ -89,9 +88,8 @@ export function Hero() {
                   external
                   variant="outline"
                   size="lg"
-                  className="w-full sm:w-auto"
-                  icon={<WhatsAppIcon className="h-5 w-5" />}>
-                  
+                  className="w-full justify-center sm:w-auto"
+                  icon={<WhatsAppIcon className="h-4 w-4" />}>
                   WhatsApp PARC
                 </ButtonLink>
               </div>
@@ -128,7 +126,7 @@ function HeroVisual() {
       transition={{ duration: 0.3, ease: EASE, delay: 0.1 }}
       className="relative">
       
-      <div className="relative mx-auto w-full max-w-[26rem] overflow-hidden rounded-[28px] border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-accent-50 p-4 shadow-lift sm:max-w-none sm:p-6">
+      <div className="relative mx-auto w-full max-w-[21.5rem] overflow-hidden rounded-[28px] border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-accent-50 p-3 shadow-lift sm:max-w-none sm:p-6">
         <div className="rounded-[22px] border border-brand-100 bg-white p-3 sm:p-5">
           <div className="flex items-center justify-between gap-3">
             <img
