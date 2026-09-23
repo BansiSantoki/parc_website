@@ -41,27 +41,27 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-5 font-display text-[clamp(2.65rem,10vw,5rem)] font-extrabold leading-[0.9] tracking-[-0.06em] text-brand-700 sm:mt-6 lg:text-[3.6rem]">
+              <h1 className="mt-5 max-w-[7.4ch] font-display text-[clamp(2.7rem,10vw,5rem)] font-extrabold leading-[0.88] tracking-[-0.06em] text-brand-700 sm:mt-6 sm:max-w-none lg:text-[3.6rem]">
                 Every Child Deserves the Opportunity to{' '}
                 <span className="relative inline-block align-baseline">
                   <span className="relative z-10">Communicate, Learn &amp; Thrive.</span>
                   <span
                     aria-hidden="true"
-                    className="absolute inset-x-0 bottom-[0.15em] z-0 h-[0.25em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
+                    className="absolute inset-x-0 bottom-[0.12em] z-0 h-[0.26em] rounded-full bg-accent-500/60 sm:h-[0.28em]" />
                   
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <p className="mt-5 text-base font-semibold leading-snug text-brand-500 sm:mt-6 sm:text-xl">
+              <p className="mt-5 max-w-[32rem] text-base font-semibold leading-snug text-brand-500 sm:mt-6 sm:text-xl">
                 Comprehensive Pediatric Audiology, Speech Therapy, Occupational Therapy, Sensory
                 Integration &amp; Special Education in Nashik
               </p>
             </Reveal>
 
             <Reveal delay={0.14}>
-              <div className="mt-5 space-y-4 text-sm leading-relaxed text-brand-800/75 sm:text-base">
+              <div className="mt-5 max-w-[32rem] space-y-4 text-sm leading-relaxed text-brand-800/75 sm:text-base">
                 <p>
                   At PARC – Pediatric Audiological Rehabilitation Center, we bring different areas of
                   child development together under one coordinated care model.
